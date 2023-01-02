@@ -8,7 +8,7 @@ menu:
   sitemap: /sitemap.xml || fa fa-sitemap
 
 avatar:
-  url: /images/avatar.png
+  url: /images/avatar.webp
   rounded: true
 
 social:
