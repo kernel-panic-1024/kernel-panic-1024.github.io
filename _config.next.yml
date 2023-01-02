@@ -1,0 +1,21 @@
+minify: true
+
+scheme: Gemini
+
+menu:
+  home: / || fa fa-home
+  categories: /categories/ || fa fa-th
+  sitemap: /sitemap.xml || fa fa-sitemap
+
+avatar:
+  url: /images/avatar.gif
+  rounded: true
+
+social:
+  GitHub: https://github.com/kernel-panic-1024 || fab fa-github
+  E-Mail: mailto:kernel_panic-1024@protonmail.com || fa fa-envelope
+
+math:
+  every_page: true
+  katex:
+    enable: true
