@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://kernel-panic-1024.github.io/posts/2022-09-rec/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://kernel-panic-1024.github.io/posts/2022-10-rec/</loc>
-    
-    <lastmod>2023-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://kernel-panic-1024.github.io/posts/2022-11-rec/</loc>
     
     <lastmod>2023-01-02</lastmod>
@@ -57,6 +39,24 @@
   
   <url>
     <loc>http://kernel-panic-1024.github.io/categories/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kernel-panic-1024.github.io/posts/2022-09-rec/</loc>
+    
+    <lastmod>2023-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://kernel-panic-1024.github.io/posts/2022-10-rec/</loc>
     
     <lastmod>2023-01-02</lastmod>
     
