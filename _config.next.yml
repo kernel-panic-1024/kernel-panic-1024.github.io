@@ -19,3 +19,7 @@ math:
   every_page: true
   katex:
     enable: true
+
+post_meta:
+  updated_at:
+    enable: false
