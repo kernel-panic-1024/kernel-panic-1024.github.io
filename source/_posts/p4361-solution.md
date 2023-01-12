@@ -59,7 +59,7 @@ $t$ 的计算类似．
 #include <iostream>
 
 using f64 = double;
-constexpr size_t N = 1 << 10;
+constexpr size_t N = 1 << 7;
 constexpr f64 eps = 1e-5;
 
 struct vec {
@@ -69,18 +69,17 @@ struct vec {
 };
 using point = vec;
 
-vec operator+(const vec &a, const vec &b) { return {a.x + b.x, a.y + b.y}; }
-vec operator*(const f64 a, const vec &b) { return {b.x * a, b.y * a}; }
 vec operator-(const vec &a) { return {-a.x, -a.y}; }
-vec operator-(const vec &a, const vec &b) { return a + (-b); }
+vec operator+(const vec &a, const vec &b) { return {a.x + b.x, a.y + b.y}; }
+vec operator-(const vec &a, const vec &b) { return {a.x - b.x, a.y - b.y}; }
+vec operator*(const f64 a, const vec &b) { return {a * b.x, a * b.y}; }
+vec norm(const vec &a) { return {-a.y, a.x}; }
 f64 dot(const vec &a, const vec &b) { return a.x * b.x + a.y * b.y; }
 f64 cross(const vec &a, const vec &b) { return a.x * b.y - a.y * b.x; }
+f64 angle(const vec &a, const vec &b) { return std::asin(cross(a, b) / (a.len() * b.len())); }
 vec rotate(const vec &a, f64 x) {
 	return {a.x * std::cos(x) - a.y * std::sin(x), a.x * std::sin(x) + a.y * std::cos(x)};
 }
-vec norm(const vec &a) { return {-a.y, a.x}; }
-f64 angle(const vec &a, const vec &b) { return std::asin(cross(a, b) / (a.len() * b.len())); }
-
 std::istream &operator>>(std::istream &is, vec &v) {
 	f64 x, y;
 	is >> x >> y, v = {x, y};
@@ -99,7 +98,7 @@ struct refl {
 	ray r;
 	f64 k;
 	refl() : r(), k() {}
-	refl(const ray &r, const f64 k) : r(r), k(k) {}
+	refl(const point &s, const point &t, const f64 k) : r(s, t - s), k(k) {}
 	bool hit(const ray &inr, ray &otr, f64 &x) {
 		vec m = norm(inr.dire);
 		f64 s = dot(m, inr.ori - r.ori) / dot(m, r.dire);
@@ -109,7 +108,7 @@ struct refl {
 		f64 t = dot(n, r.ori - inr.ori) / dot(n, inr.dire);
 		if (t < eps) return false;
 		x = t, otr = {r.at(s), rotate(n, k * angle(-inr.dire, n))};
-		return t > eps;
+		return true;
 	}
 };
 
@@ -142,7 +141,7 @@ int main() {
 	for (int i = 1, x, y; i <= n; i++) {
 		point s, t;
 		std::cin >> s >> t >> x >> y;
-		a[i] = {ray(s, t - s), f64(x) / y};
+		a[i] = {s, t, f64(x) / y};
 	}
 
 	dfs({o, d}, 10);
