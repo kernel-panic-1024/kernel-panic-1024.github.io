@@ -2,6 +2,7 @@ http://kernel-panic-1024.github.io/posts/2022-09-rec/
 http://kernel-panic-1024.github.io/posts/2022-10-rec/
 http://kernel-panic-1024.github.io/posts/2022-11-rec/
 http://kernel-panic-1024.github.io/posts/2022-12-rec/
+http://kernel-panic-1024.github.io/posts/2023-01-rec/
 http://kernel-panic-1024.github.io/posts/cf1458c-solution/
 http://kernel-panic-1024.github.io/posts/cf1732c1-solution/
 http://kernel-panic-1024.github.io/posts/p4361-solution/
