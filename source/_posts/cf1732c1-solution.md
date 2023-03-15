@@ -1,5 +1,5 @@
 ---
-title: CF1458C1 Sheikh (Easy version) 题解
+title: CF1732C1 Sheikh (Easy version) 题解
 date: 2022-12-28 22:27:31
 description: 
 categories:
