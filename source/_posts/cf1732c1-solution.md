@@ -4,7 +4,9 @@ date: 2022-12-28 22:27:31
 description: 
 categories:
 - 题解
-sticky: 1
+tags:
+- 位运算
+- 二分
 ---
 ## 题目大意
 给你 $1$ 个长度为 $n$ 的序列 $\{a_i\}$，我们定义 $1$ 个区间 $a_{l\cdots r}$ 的价值为 $\sum_{i=l}^{r}a_i-\bigoplus_{i=l}^{r}a_i$．

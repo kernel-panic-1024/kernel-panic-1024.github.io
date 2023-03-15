@@ -3,7 +3,8 @@ title: CF1458C Latin Square 题解
 date: 2022-10-26 19:05:43
 categories:
 - 题解
-sticky: 1
+tags:
+- 矩阵乘法
 ---
 模拟赛考了这题，赛时想出了一个用矩阵乘法的屑做法，常数巨大，没想到还跑的挺快．
 

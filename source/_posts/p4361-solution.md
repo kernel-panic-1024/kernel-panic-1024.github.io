@@ -3,7 +3,8 @@ title: P4361 [SHOI2015] 激光发生器 题解
 date: 2022-12-10 23:32:54
 categories:
 - 题解
-sticky: 1
+tags:
+- 计算几何
 ---
 ## 题目大意
 光线追踪，但是对于第 $i$ 面镜子，光线的入射角为 $\alpha$ 时，反射角 $\beta=\lambda_i\alpha$，其中 $\lambda_i$ 是给定的常数．
