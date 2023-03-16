@@ -1,5 +1,5 @@
 ---
-title: CF1458C Latin Square 题解
+title: Codeforces 1458C Latin Square 题解
 date: 2022-10-26 19:05:43
 categories:
 - 题解
