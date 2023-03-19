@@ -1,3 +1,4 @@
+http://krn1pnc.github.io/tags/
 http://krn1pnc.github.io/posts/2022-09-rec/
 http://krn1pnc.github.io/posts/2022-10-rec/
 http://krn1pnc.github.io/posts/2022-11-rec/
@@ -8,7 +9,6 @@ http://krn1pnc.github.io/posts/cf1458c-solution/
 http://krn1pnc.github.io/posts/cf1732c1-solution/
 http://krn1pnc.github.io/posts/lg4361-solution/
 http://krn1pnc.github.io/categories/
-http://krn1pnc.github.io/tags/
 http://krn1pnc.github.io/
 http://krn1pnc.github.io/tags/%E7%9F%A9%E9%98%B5/
 http://krn1pnc.github.io/tags/%E8%A1%8C%E5%88%97%E5%BC%8F/
