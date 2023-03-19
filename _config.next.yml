@@ -21,6 +21,11 @@ math:
   katex:
     enable: true
 
+codeblock:
+  prism:
+    light: prism-tomorrow
+    dark: prism-tomorrow
+
 post_meta:
   updated_at:
     enable: false
