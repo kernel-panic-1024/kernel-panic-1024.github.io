@@ -34,6 +34,8 @@ $n \le 100$，$S \le 2 \times 10^5$．
 
 转移对以上三种情况取 $\min$ 即可，边界条件显然有 $f_{i,i} = 1$．
 
+时间复杂度 $O(n^4)$．
+
 ## 代码
 ```cpp
 #include <algorithm>
