@@ -226,7 +226,7 @@
 <p>如何省下一些这样的常数呢？<s>通过观摩 uoj 群中的大佬讨论</s>我们可以发现，由于维护的信息量不大，矩阵中的很多值实际上都是没有用的，那么我们可以将有用的值单独拿出来维护．</p>
 <p>如何找到这样的值呢？我们可以随机出一些修改矩阵乘到单位矩阵上，多次进行这样的过程，并对结果累加，累加出来的矩阵中有值的元素就是我们需要的维护的元素．</p>
 <p>如果累加后矩阵中的某个元素的值等于累加次数，那么这个位置的值大概率恒为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，不需要维护它．</p>
-<p>需要注意的是，多随机几次，不然无法保证正确性．</p>
+<p>由经验来看，多进行几次这样的操作，每次乘少量的矩阵，效果比较好．</p>
 
       
     </div>
