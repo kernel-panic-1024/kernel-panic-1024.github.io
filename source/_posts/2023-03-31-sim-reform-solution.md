@@ -44,4 +44,86 @@ $n,m,C \le 10^6$．
 时间复杂度 $O(n)$．
 
 ## 代码
-~~我测，没拷，先咕着．~~
+```cpp
+#include <cstdio>
+#include <cstring>
+
+using i64 = long long;
+
+constexpr int N = 1e6;
+constexpr i64 P = 998244353;
+constexpr i64 B = 19260817;
+constexpr i64 iB = 494863259;
+
+int T, tot;
+int n, m;
+int a[N + 5], b[N + 5];
+int ap[N + 5];
+
+int ans[N + 5], tp;
+int pa[N + 5], sa[N + 5];
+
+i64 pw[N + 5], ipw[N + 5];
+void pre() {
+	pw[0] = ipw[0] = 1;
+	for (int i = 1; i <= N; i++) {
+		pw[i] = pw[i - 1] * B % P;
+		ipw[i] = ipw[i - 1] * iB % P;
+	}
+}
+
+int main() {
+	scanf("%d%d", &T, &tot), pre();
+	while (T--) {
+		memset(pa, 0, sizeof(pa));
+		memset(sa, 0, sizeof(sa));
+
+		scanf("%d%d", &n, &m);
+		for (int i = 1; i <= n; i++) scanf("%d", &a[i]);
+		for (int i = 1; i <= m; i++) scanf("%d", &b[i]);
+
+		for (int i = 1; i <= n; i++) ap[a[i]] = 0;
+		for (int i = 1; i <= n; i++) {
+			if (ap[a[i]]) pa[i] = ap[a[i]];
+			ap[a[i]] = i;
+		}
+		for (int i = 1; i <= n; i++) ap[a[i]] = 0;
+		for (int i = n; i >= 1; i--) {
+			if (ap[a[i]]) sa[i] = ap[a[i]];
+			ap[a[i]] = i;
+		}
+
+		i64 t = 0;
+		for (int i = 1; i <= m; i++) ap[b[i]] = 0;
+		for (int i = 1; i <= m; i++) {
+			if (ap[b[i]]) {
+				(t += pw[i] * (i - ap[b[i]]) % P) %= P;
+			}
+			ap[b[i]] = i;
+		}
+		i64 s = 0;
+		for (int i = 1; i <= m; i++) {
+			if (pa[i]) (s += pw[i] * (i - pa[i]) % P) %= P;
+		}
+
+		tp = 0;
+		for (int i = 1; i + m - 1 <= n; i++) {
+			if (s == t) ans[++tp] = i;
+			if (i + m - 1 == n) break;
+			if (sa[i] && sa[i] <= i + m - 1) {
+				(s += P - pw[sa[i] - i + 1] * (sa[i] - i) % P) %= P;
+			}
+			s = (s * iB) % P;
+			if (i < pa[i + m]) {
+				(s += pw[m] * (i + m - pa[i + m]) % P) %= P;
+			}
+		}
+
+		printf("%d\n", tp);
+		for (int i = 1; i <= tp; i++) {
+			printf("%d%c", ans[i], " \n"[i == tp]);
+		}
+	}
+	return 0;
+}
+```
