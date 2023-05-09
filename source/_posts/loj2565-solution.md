@@ -9,6 +9,8 @@ tags:
 
 大受震撼．
 
+<!-- more -->
+
 ## 思路
 
 首先我们有 $\sigma_0(xyz) = \sum\limits_{i | x} \sum\limits_{j | y} \sum\limits_{k | z} [i \perp j][j \perp k][i \perp k]$．
