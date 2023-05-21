@@ -3,7 +3,7 @@ title: 洛谷 3317 [SDOI2014] 重建 题解
 date: 2023-05-20 13:12:14
 categories: 题解
 tags:
-- 矩阵树定理
+  - 矩阵树定理
 ---
 
 /zhq．
@@ -20,7 +20,7 @@ $$
 \sum_{T} \prod_{e \in T} w_e
 $$
 
-其中 $T$ 取遍生成树的边集，$w_e$ 是 $e$ 这条边的边权．
+其中 $T$ 取遍图中所有生成树的边集，$w_e$ 是 $e$ 这条边的边权．
 
 设 $p_{e}$ 为 $e$ 这条边存在的概率，对于这道题，我们要求的是：
 
@@ -28,19 +28,18 @@ $$
 \sum_{T} \left(\prod_{e \in T} p_e\right) \times \left(\prod_{e \not\in T} 1 - p_e\right)
 $$
 
-发现右边那个 $\prod$ 很烦人，它阻止我们直接使用矩阵树定理．
-
-考虑怎么让它与 $\sum$ 无关．发现式子可化为：
+发现右边的 $\prod$ 很烦人，它阻止我们直接使用矩阵树定理．考虑怎么让它与 $\sum$ 无关．提一个 $\prod\limits_e 1 - p_e$ 出来，式子可化为：
 
 $$
-\left(\prod_e 1 - p_e\right) \times \sum_{T} \left(\prod_{e \in T} \frac{p_e}{1 - p_e}\right)
+\left(\prod_e 1 - p_e\right) \times \sum_{T} \prod_{e \in T} \frac{p_e}{1 - p_e}
 $$
 
-左边那个 $\prod$ 可以直接算，右边那个 $\sum$ 使用矩阵树定理．
+左边的 $\prod$ 可以直接算，右边的 $\sum$ 使用矩阵树定理．
 
-这样做有一个问题，$p_e = 1$ 时会除出来 inf．除的时候加个微小扰动即可．
+注意到存在 $p_e = 1$ 的情况，直接做除法会除出来 inf，给分母加个微小扰动即可．
 
 ## 代码
+
 ```cpp
 #include <cstdio>
 #include <cmath>
