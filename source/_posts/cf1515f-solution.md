@@ -9,6 +9,8 @@ tags:
 
 妙妙构造题．
 
+<!-- more -->
+
 ## 思路
 
 首先，观察到所选择的边一定构成原图中的某一生成树．
@@ -36,7 +38,7 @@ tags:
 #include <utility>
 #include <vector>
 
-static int rd() {
+inline int rd() {
 	int x = 0, f = 1, c = getchar();
 	while (((c - '0') | ('9' - c)) < 0)
 		f = c != '-', c = getchar();
