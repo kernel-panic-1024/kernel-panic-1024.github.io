@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"krn1pnc.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="为什么想不到！！！！！！！1111  思路 考虑逐层合并玻璃，并计算对合并后玻璃对从上方射入的光线的透过率． 设我们此前合并的玻璃对从上方射入的光线的透过率的透过率为 a1a_1a1​，当前我们准备合并的玻璃的透过率为 a2a_2a2​，发现由于光线会在两层玻璃之间反复横跳，只计算这一个量无法进行合并． 考虑再计算合并后玻璃对从下方射入的光线的反射率． 再设我们此前合并的玻璃对从下方射入的光线的反">
+    <meta name="description" content="为什么想不到！！！！！！！1111">
 <meta property="og:type" content="article">
 <meta property="og:title" content="洛谷 5323 [BJOI2019] 光线 题解">
 <meta property="og:url" content="http://krn1pnc.github.io/posts/lg5323-solution/">
 <meta property="og:site_name" content="kernel_panic 的存档">
-<meta property="og:description" content="为什么想不到！！！！！！！1111  思路 考虑逐层合并玻璃，并计算对合并后玻璃对从上方射入的光线的透过率． 设我们此前合并的玻璃对从上方射入的光线的透过率的透过率为 a1a_1a1​，当前我们准备合并的玻璃的透过率为 a2a_2a2​，发现由于光线会在两层玻璃之间反复横跳，只计算这一个量无法进行合并． 考虑再计算合并后玻璃对从下方射入的光线的反射率． 再设我们此前合并的玻璃对从下方射入的光线的反">
+<meta property="og:description" content="为什么想不到！！！！！！！1111">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-25T14:18:58.000Z">
-<meta property="article:modified_time" content="2023-05-25T06:46:21.252Z">
+<meta property="article:modified_time" content="2023-05-25T06:48:41.846Z">
 <meta property="article:author" content="kernel_panic">
 <meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
@@ -228,6 +228,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>为什么想不到！！！！！！！1111</p>
+<span id="more"></span>
 <h2 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h2>
 <p>考虑逐层合并玻璃，并计算对合并后玻璃对从上方射入的光线的透过率．</p>
 <p>设我们此前合并的玻璃对从上方射入的光线的透过率的透过率为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，当前我们准备合并的玻璃的透过率为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，发现由于光线会在两层玻璃之间反复横跳，只计算这一个量无法进行合并．</p>
