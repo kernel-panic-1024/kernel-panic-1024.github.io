@@ -34,6 +34,8 @@ tags:
 
 复杂度 $O\left(n + \dfrac{n}{\ln n}\log n\right) = O(n)$．
 
+事实上在质数次幂处能快速计算的积性函数都可以使用类似的方式筛出，详见 [OI Wiki](https://oi-wiki.org/math/number-theory/sieve/#%E4%B8%80%E8%88%AC%E7%9A%84%E7%A7%AF%E6%80%A7%E5%87%BD%E6%95%B0)．
+
 ## 代码
 
 ```cpp
