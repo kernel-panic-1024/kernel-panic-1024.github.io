@@ -39,7 +39,7 @@ $$
 ，那么有
 
 $$
-f_{m, i} = [x^i]\prod_{i = 1}^m F_i(x)
+f_{m, n} = [x^n]\prod_{i = 1}^m F_i(x)
 $$
 
 分治 FFT 即可．时间复杂度 $O(n \log^2 n)$．
