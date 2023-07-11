@@ -2,159 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://krn1pnc.github.io/tags/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2022-09-rec/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2022-10-rec/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2022-11-rec/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2022-12-rec/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-01-rec/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-03-11-sim-maze-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-03-16-sim-scene-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-03-22-sim-milk-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-03-23-sim-ichi-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-03-25-sim-arithmetic-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-03-31-sim-reform-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1375g-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1458c-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1515f-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1732c1-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1842e-solution/</loc>
-    
-    <lastmod>2023-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://krn1pnc.github.io/posts/cf1845e-solution/</loc>
     
     <lastmod>2023-07-11</lastmod>
@@ -380,7 +227,169 @@
   </url>
   
   <url>
+    <loc>http://krn1pnc.github.io/about/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://krn1pnc.github.io/categories/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/tags/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2022-09-rec/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2022-10-rec/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2022-11-rec/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2022-12-rec/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-01-rec/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-03-11-sim-maze-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-03-16-sim-scene-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-03-22-sim-milk-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-03-23-sim-ichi-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-03-25-sim-arithmetic-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-03-31-sim-reform-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1375g-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1458c-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1515f-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1732c1-solution/</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1842e-solution/</loc>
     
     <lastmod>2023-07-11</lastmod>
     
