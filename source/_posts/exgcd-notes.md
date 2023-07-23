@@ -2,6 +2,8 @@
 title: EXGCD 复习笔记
 date: 2023-07-20 18:43:49
 categories: 学习笔记
+tags:
+  - EXGCD
 ---
 
 我超，原来我不会 EXGCD．
