@@ -11,12 +11,14 @@ tags:
 CRT 是用来求解形如下列同余方程组的算法：
 
 $$
-\begin{cases}
-  x \equiv a_1 \pmod{b_1} \\
-  x \equiv a_2 \pmod{b_2} \\
-  \vdots \\
-  x \equiv a_n \pmod{b_n}
-\end{cases}
+\left\{
+\begin{matrix}
+  x & \equiv & a_1 \pmod{b_1} \\
+  x & \equiv & a_2 \pmod{b_2} \\
+  & \vdots & \\
+  x & \equiv & a_n \pmod{b_n}
+\end{matrix}
+\right.
 $$
 
 其中 $b_i$ 互质．
