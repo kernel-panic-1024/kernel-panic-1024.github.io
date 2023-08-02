@@ -7,10 +7,12 @@ tags:
 - 计算几何
 ---
 ## 题目大意
+
 光线追踪，但是对于第 $i$ 面镜子，光线的入射角为 $\alpha$ 时，反射角 $\beta=\lambda_i\alpha$，其中 $\lambda_i$ 是给定的常数．
 
 <!--more-->
 ## 思路
+
 要求出光线的路径上遇到的所有偏转装置的编号，直接递归模拟反射过程即可，难点在于如何计算反射光线．
 
 我们使用 $\mathbf{R}(x)=\mathbf{A}+x\mathbf{b}$ 来表示一条直线，其中 $\mathbf{A}$ 是源点，$\mathbf{b}$ 是方向向量，$x$ 是参数．
@@ -44,17 +46,18 @@ $t$ 的计算类似．
 
 为了计算方便，不妨让反射过程中的法线 $\mathbf{N}(x)=\mathbf{H}+x\mathbf{w}$ 和 $\mathbf{R}(x)$ 在同一侧．如下图所示：
 
-![](/images/p4361-solution/1.png)
+![](/images/lg4361-solution/1.png)
 
 这样我们只需要计算出 $-\mathbf{u}$ 到 $\mathbf{w}$ 的转角 $\theta$，反射光线即为 $\mathbf{R}^\prime(x)=\mathbf{H}+x\mathbf{c}$，其中 $\mathbf{c}$ 是 $\mathbf{w}$ 旋转 $\lambda\theta$ 角之后的向量．如下图所示：
 
-![](/images/p4361-solution/2.png)
+![](/images/lg4361-solution/2.png)
 
 其中 $\mathbf{a}$ 到 $\mathbf{b}$ 的转角 $\displaystyle\theta=\arcsin\frac{\mathbf{a}\times\mathbf{b}}{|\mathbf{a}||\mathbf{b}|}$．
 
 在模拟光线反射的过程中，对于能够相交的偏转装置，设交点为 $\mathbf{R}(s)$，我们选取最小的 $s$ 所对应的反射光线作为下一次反射的入射光线，这样就能保证这一次反射在离源点最近的反射装置处发生．
 
 ## 代码
+
 ```cpp
 #include <cmath>
 #include <iostream>
