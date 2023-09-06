@@ -4,7 +4,7 @@ date: 2023-09-05 15:09:22
 categories: 题解
 ---
 
-Ad-hoc．\qd
+Ad-hoc．/qd
 
 组题人我谢谢你．
 
