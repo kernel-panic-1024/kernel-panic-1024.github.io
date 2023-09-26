@@ -19,29 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"krn1pnc.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="线段树维护历史和时，标记有时难以推出，这时候为了节省时间，一般会将标记写成矩阵的形式．这样虽然省下了推标记的时间，但是矩阵的大小动辄 5×55 \times 55×5 往上，带来的常数影响是巨大的． 如何卡这个常数？可以发现，由于维护的信息量不大，矩阵中的很多值实际上是没用的，我们可以将有用的值单独拿出来维护． 具体地，我们可以随机出一些修改矩阵乘到单位矩阵上，多次进行这样的过程，并对结果累加，累">
+    <meta name="description" content="往简中互联网塞点垃圾． WIP．">
 <meta property="og:type" content="article">
-<meta property="og:title" content="矩阵做标记时的常数优化技巧">
-<meta property="og:url" content="http://krn1pnc.github.io/posts/matrix-tag-optimize-trick/">
+<meta property="og:title" content="容斥原理与反演学习笔记">
+<meta property="og:url" content="http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/">
 <meta property="og:site_name" content="kernel_panic 的存档">
-<meta property="og:description" content="线段树维护历史和时，标记有时难以推出，这时候为了节省时间，一般会将标记写成矩阵的形式．这样虽然省下了推标记的时间，但是矩阵的大小动辄 5×55 \times 55×5 往上，带来的常数影响是巨大的． 如何卡这个常数？可以发现，由于维护的信息量不大，矩阵中的很多值实际上是没用的，我们可以将有用的值单独拿出来维护． 具体地，我们可以随机出一些修改矩阵乘到单位矩阵上，多次进行这样的过程，并对结果累加，累">
+<meta property="og:description" content="往简中互联网塞点垃圾． WIP．">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-27T22:59:05.000Z">
-<meta property="article:modified_time" content="2023-09-26T14:16:23.122Z">
+<meta property="article:published_time" content="2023-09-26T20:06:16.000Z">
+<meta property="article:modified_time" content="2023-09-26T14:16:23.118Z">
 <meta property="article:author" content="kernel_panic">
-<meta property="article:tag" content="矩阵">
-<meta property="article:tag" content="线段树">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://krn1pnc.github.io/posts/matrix-tag-optimize-trick/">
+<link rel="canonical" href="http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://krn1pnc.github.io/posts/matrix-tag-optimize-trick/","path":"posts/matrix-tag-optimize-trick/","title":"矩阵做标记时的常数优化技巧"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/","path":"posts/i-e-principle-and-inversion-notes/","title":"容斥原理与反演学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>矩阵做标记时的常数优化技巧 | kernel_panic 的存档</title>
+<title>容斥原理与反演学习笔记 | kernel_panic 的存档</title>
   
 
 
@@ -101,7 +99,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -114,6 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text"> 容斥原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E9%99%90%E5%88%B6%E7%9A%84%E5%AE%B9%E6%96%A5"><span class="nav-number">1.1.</span> <span class="nav-text"> 简单限制的容斥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%8C%96%E7%9A%84%E5%AE%B9%E6%96%A5"><span class="nav-number">1.2.</span> <span class="nav-text"> 一般化的容斥</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E6%BC%94"><span class="nav-number">2.</span> <span class="nav-text"> 反演</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E8%B4%A8"><span class="nav-number">2.1.</span> <span class="nav-text"> 本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%8F%8D%E6%BC%94%E5%85%AC%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text"> 第一反演公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%BB%8F%E5%85%B8%E7%9A%84%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.</span> <span class="nav-text"> 一些经典的反演</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 二项式反演</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%90%E9%9B%86%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 子集反演</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mobius-%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.3.</span> <span class="nav-text"> Mobius 反演</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#euler-%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.4.</span> <span class="nav-text"> Euler 反演</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-max-%E5%AE%B9%E6%96%A5"><span class="nav-number">2.3.5.</span> <span class="nav-text"> Min-Max 容斥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E4%BD%8D%E6%A0%B9%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.6.</span> <span class="nav-text"> 单位根反演</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stirling-%E5%8F%8D%E6%BC%94"><span class="nav-number">2.3.7.</span> <span class="nav-text"> Stirling 反演</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +176,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://krn1pnc.github.io/posts/matrix-tag-optimize-trick/">
+    <link itemprop="mainEntityOfPage" href="http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.webp">
@@ -190,12 +189,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="矩阵做标记时的常数优化技巧 | kernel_panic 的存档">
+      <meta itemprop="name" content="容斥原理与反演学习笔记 | kernel_panic 的存档">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          矩阵做标记时的常数优化技巧
+          容斥原理与反演学习笔记
         </h1>
 
         <div class="post-meta-container">
@@ -206,7 +205,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-03-27 22:59:05" itemprop="dateCreated datePublished" datetime="2023-03-27T22:59:05+00:00">2023-03-27</time>
+      <time title="创建时间：2023-09-26 20:06:16" itemprop="dateCreated datePublished" datetime="2023-09-26T20:06:16+00:00">2023-09-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -214,7 +213,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Tricks/" itemprop="url" rel="index"><span itemprop="name">Tricks</span></a>
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
         </span>
     </span>
 
@@ -227,9 +226,32 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>线段树维护历史和时，标记有时难以推出，这时候为了节省时间，一般会将标记写成矩阵的形式．这样虽然省下了推标记的时间，但是矩阵的大小动辄 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5 \times 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span> 往上，带来的常数影响是巨大的．</p>
-<p>如何卡这个常数？可以发现，由于维护的信息量不大，矩阵中的很多值实际上是没用的，我们可以将有用的值单独拿出来维护．</p>
-<p>具体地，我们可以随机出一些修改矩阵乘到单位矩阵上，多次进行这样的过程，并对结果累加，累加出来的矩阵中有值的元素大概率就是我们需要的维护的元素．如果累加后矩阵中的某个元素的值等于累加次数，那么这个位置的值大概率恒为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，不需要维护它．由经验来看，多进行几次这样的操作，每次乘少量的矩阵，效果比较好．</p>
+    <div class="post-body" itemprop="articleBody"><p>往简中互联网塞点垃圾．</p>
+<p>WIP．</p>
+<span id="more"></span>
+<h2 id="容斥原理"><a class="markdownIt-Anchor" href="#容斥原理"></a> 容斥原理</h2>
+<h3 id="简单限制的容斥"><a class="markdownIt-Anchor" href="#简单限制的容斥"></a> 简单限制的容斥</h3>
+<h3 id="一般化的容斥"><a class="markdownIt-Anchor" href="#一般化的容斥"></a> 一般化的容斥</h3>
+<h2 id="反演"><a class="markdownIt-Anchor" href="#反演"></a> 反演</h2>
+<h3 id="本质"><a class="markdownIt-Anchor" href="#本质"></a> 本质</h3>
+<h3 id="第一反演公式"><a class="markdownIt-Anchor" href="#第一反演公式"></a> 第一反演公式</h3>
+<h3 id="一些经典的反演"><a class="markdownIt-Anchor" href="#一些经典的反演"></a> 一些经典的反演</h3>
+<h4 id="二项式反演"><a class="markdownIt-Anchor" href="#二项式反演"></a> 二项式反演</h4>
+<h4 id="子集反演"><a class="markdownIt-Anchor" href="#子集反演"></a> 子集反演</h4>
+<h4 id="mobius-反演"><a class="markdownIt-Anchor" href="#mobius-反演"></a> Mobius 反演</h4>
+<h4 id="euler-反演"><a class="markdownIt-Anchor" href="#euler-反演"></a> Euler 反演</h4>
+<h4 id="min-max-容斥"><a class="markdownIt-Anchor" href="#min-max-容斥"></a> Min-Max 容斥</h4>
+<h4 id="单位根反演"><a class="markdownIt-Anchor" href="#单位根反演"></a> 单位根反演</h4>
+<h4 id="stirling-反演"><a class="markdownIt-Anchor" href="#stirling-反演"></a> Stirling 反演</h4>
+<h2 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h2>
+<p>《具体数学》5.1, 6.1</p>
+<p>Alex_Wei, <a target="_blank" rel="noopener" href="https://www.cnblogs.com/alex-wei/p/Combinatorial_Mathematics.html"><em>组合数学相关</em></a></p>
+<p>Alex_Wei, <a target="_blank" rel="noopener" href="https://www.cnblogs.com/alex-wei/p/Dirichlet.html"><em>反演与狄利克雷卷积</em></a></p>
+<p>VFleaKing, <a target="_blank" rel="noopener" href="https://vfleaking.blog.uoj.ac/slide/87"><em>炫酷反演魔术</em></a></p>
+<p>command_block, <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/command-block/xuan-ku-fan-yan-mo-shu"><em>炫酷反演魔术</em></a></p>
+<p>RenaMoe, <a target="_blank" rel="noopener" href="https://renamoe.gitee.io/2021/04/08/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><em>容斥原理学习笔记</em></a></p>
+<p>RenaMoe, <a target="_blank" rel="noopener" href="https://renamoe.gitee.io/2021/03/11/%E7%AC%94%E8%AE%B0-%E5%90%84%E7%B1%BB%E5%8F%8D%E6%BC%94/"><em>笔记 各类反演</em></a></p>
+<p>Deadecho, <a target="_blank" rel="noopener" href="https://www.cnblogs.com/gzy-cjoier/p/9686787.html"><em>容斥原理，容斥系数</em></a></p>
 
     </div>
 
@@ -238,23 +260,16 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E7%9F%A9%E9%98%B5/" rel="tag"># 矩阵</a>
-              <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag"># 线段树</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/2023-03-23-sim-ichi-solution/" rel="prev" title="2023.3.23 省选模拟赛 ichi 题解">
-                  <i class="fa fa-angle-left"></i> 2023.3.23 省选模拟赛 ichi 题解
+                <a href="/posts/codeforces-rec/" rel="prev" title="Codeforces 杂题选记">
+                  <i class="fa fa-angle-left"></i> Codeforces 杂题选记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/2023-03-25-sim-arithmetic-solution/" rel="next" title="2023.3.25 省选模拟赛 Arithmetic 题解">
-                  2023.3.25 省选模拟赛 Arithmetic 题解 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
