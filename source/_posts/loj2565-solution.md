@@ -156,4 +156,4 @@ signed main() {
 
 ## 参考
 
-[GKxx, _题解 P4619_](https://www.luogu.com.cn/blog/gkxx-is-here/solution-p4619)
+GKxx, [_题解 P4619_](https://www.luogu.com.cn/blog/gkxx-is-here/solution-p4619)

@@ -124,4 +124,4 @@ int main() {
 
 ## 参考
 
-[E*huan, \_P5324 题解*](https://www.luogu.com.cn/blog/Ehuan/p5324-ti-xie)
+E_huan, [_P5324 题解_](https://www.luogu.com.cn/blog/Ehuan/p5324-ti-xie)

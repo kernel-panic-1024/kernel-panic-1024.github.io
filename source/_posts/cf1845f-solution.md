@@ -138,4 +138,4 @@ int main() {
 
 ## 参考
 
-[PEKKA_l, _CF1845F 题解_](https://www.luogu.com.cn/blog/PEKKA-l-2021/solution-cf1845f)
+PEKKA_l, [_CF1845F 题解_](https://www.luogu.com.cn/blog/PEKKA-l-2021/solution-cf1845f)

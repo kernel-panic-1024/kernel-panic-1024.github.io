@@ -21,21 +21,25 @@ tags:
 分 $4$ 类转移：
 
 0. 考虑转移 $0$ 情况．这时 $u$ 的儿子必定都被擦除，且儿子 $v$ 的擦除时间一定不后于 $(u, v)$ 这条边被考虑．这是因为考虑 $(u, v)$ 这条边时，为了保全 $u$ 不被擦除，$v$ 一定会被擦．那么有转移
+
   $$
     f_{u, 0} = \prod_v (f_{v, 1} + f_{v, 2})
   $$
 
 1. 考虑转移 $1$ 情况．我们可以从儿子中钦定一个 $\prec f$ 的 $v$ 作为擦掉 $u$ 的点．组合其他点的方案时，如果存在 $\prec v$ 的儿子 $w$ 不被擦除或者在考虑边 $(u, w)$ 之后被擦，那么 $u$ 会被 $w$ 擦而不是被 $v$ 擦，这样的状态不合法．由于在考虑 $(u, v)$ 时 $u$ 被擦了，那么 $\succ v$ 的儿子显然就不能被 $u$ 擦了．那么有转移
+
   $$
     f_{u, 1} = \sum_{v \prec f} (f_{v, 0} + f_{v, 3}) \times \prod_{w \prec v} (f_{w, 1} + f_{w, 2}) \times \prod_{w \succ v} (f_{w, 0} + f_{w, 1} + f_{w, 3})
   $$
 
 2. 考虑转移 $2$ 情况．由于 $u$ 被 $f$ 擦了，那么所有 $\prec f$ 的儿子 $v$ 都不能擦 $u$，所有 $\succ f$ 的儿子 $v$ 都不能被 $u$ 擦．有转移
+
   $$
     f_{u, 2} = \prod_{v \prec f} (f_{v, 1} + f_{v, 2}) \times \prod_{v \succ f} (f_{v, 0} + f_{v, 1} + f_{v, 3})
   $$
 
 3. 考虑转移 $3$ 情况．于 $1$ 情况类似，枚举 $\succ f$ 的儿子钦定擦除即可．有转移
+
   $$
     f_{u, 3} = \sum_{v \succ f} (f_{v, 0} + f_{v, 3}) \times \prod_{w \prec v} (f_{w, 1} + f_{w, 2}) \times \prod_{w \succ v} (f_{w, 0} + f_{w, 1} + f_{w, 3})
   $$
@@ -123,4 +127,4 @@ int main() {
 
 qazswedx, _DP 选讲_
 
-[xht, _Codeforces Round #606 (Div. 1, based on Technocup 2020 Elimination Round 4) 题解_](https://www.xht37.com/codeforces-round-606-div-1-based-on-technocup-2020-elimination-round-4-%e9%a2%98%e8%a7%a3/#Tree_Elimination)
+xht, [_Codeforces Round #606 (Div. 1, based on Technocup 2020 Elimination Round 4) 题解_](https://www.xht37.com/codeforces-round-606-div-1-based-on-technocup-2020-elimination-round-4-%e9%a2%98%e8%a7%a3/#Tree_Elimination)

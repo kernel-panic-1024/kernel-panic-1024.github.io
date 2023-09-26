@@ -104,4 +104,4 @@ int main() {
 
 ## 参考
 
-[Purslane, _CF1849F_](https://www.luogu.com.cn/blog/120947/solution-cf1849f)
+Purslane, [_CF1849F_](https://www.luogu.com.cn/blog/120947/solution-cf1849f)
