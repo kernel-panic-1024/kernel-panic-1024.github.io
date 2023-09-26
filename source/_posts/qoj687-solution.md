@@ -25,4 +25,69 @@ $$
 
 ## 代码
 
-先咕着．
+```cpp
+#include <cstdio>
+#include <vector>
+#define debug(...) fprintf(stderr, __VA_ARGS__)
+
+#define int long long
+
+inline int rd() {
+	int x = 0, f = 1, c = getchar();
+	while (((c - '0') | ('9' - c)) < 0)
+		f = c != '-', c = getchar();
+	while (((c - '0') | ('9' - c)) > 0)
+		x = x * 10 + c - '0', c = getchar();
+	return f ? x : -x;
+}
+
+const int N = 20;
+
+int n, m; int nxt[N], pre[N];
+int f[1 << N], g[1 << N];
+void solve() {
+	n = rd(), m = rd();
+	for(int i = 1; i <= m; i++) {
+		int u = rd() - 1, v = rd() - 1;
+		nxt[u] |= 1 << v, pre[v] |= 1 << u;
+	}
+	int U = (1 << n) - 1;
+	f[0] = 1;
+	for(int S = 0; S <= U; S++) {
+		for(int i = 0; i < n; i++) {
+			if((S & (1 << i)) || (S & pre[i]) != pre[i]) continue;
+			f[S | (1 << i)] += f[S];
+		}
+	}
+	g[U] = 1;
+	for(int S = U; S >= 0; S--) {
+		for(int i = 0; i < n; i++) {
+			if(!(S & (1 << i)) || (S & nxt[i])) continue;
+			g[S ^ (1 << i)] += g[S];
+		}
+	}
+	for(int u = 0; u < n; u++) {
+		for(int v = 0; v < n; v++) {
+			if(u == v) printf("0");
+			else {
+				int ans = 0, msk = U ^ (1 << u) ^ (1 << v);
+				for(int S = msk;; S = (S - 1) & msk) {
+					if((S & pre[v]) == pre[v]) ans += f[S] * g[S | (1 << v)];
+					if(!S) break;
+				}
+				printf("%lld", ans);
+			}
+			printf("%c", " \n"[v == n - 1]);
+		}
+	}
+
+	for(int i = 0; i <= U; i++) f[i] = g[i] = 0;
+	for(int i = 0; i < n; i++) nxt[i] = pre[i] = 0;
+}
+
+signed main() {
+	int T = rd();
+	while(T--) solve();
+	return 0;
+}
+```
