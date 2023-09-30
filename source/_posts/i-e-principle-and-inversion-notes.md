@@ -30,7 +30,7 @@ $$
 \sum_{S \subseteq U} (-1)^{|S| + 1} f_S
 $$
 
-容易验证这是对的．我们机械降神了一个 $(-1)^{|S| + 1}$，然后和式就给出了正确的值，看起来很神奇！为啥对来着．
+容易验证这是对的．我们空降了一个 $(-1)^{|S| + 1}$，然后和式就给出了正确的值，看起来很神奇！为啥对来着．
 
 考察一个属性集合为 $S$ 的物品，它会被所有 $f_T, T \subseteq S$ 统计到一遍，那么总共就会被计算
 
@@ -46,7 +46,7 @@ $$
 
 此时带入 $(-1)^{|S| + 1}$ 的正确性就可以通过二项式定理轻易得出了！
 
-在我们尝试解决其他问题的时候，系数能够通过简单的递推求出就皆大欢喜．若不能，我们就需要一些其他工具．
+可惜地，并不是所有问题的容斥系数的形式都这样简单．所以，我们需要了解一些魔术．
 
 ## 反演
 
@@ -100,11 +100,42 @@ $$
 
 ### 二项式反演
 
+$$
+\begin{aligned}
+  f_n = \sum_{i} \binom{n}{i} g_i &\iff g_n = \sum_{i} \binom{n}{i} (-1)^{n - i} f_i \\
+  f_n = \sum_{i} \binom{i}{n} g_i &\iff g_n = \sum_{i} \binom{i}{n} (-1)^{i - n} f_i
+\end{aligned}
+$$
+
+容易看出，下面那个形式本质上是将上面那个形式的系数矩阵转置得到的．
+
+带入 $f_i = x^i, g_i = (x - 1)^i$ 容易验证正确性．
+
 ### 子集反演
+
+$$
+\begin{aligned}
+  f_S = \sum_{T \subseteq S} g_T &\iff g_S = \sum_{T \subseteq S} (-1)^{|S| - |T|} f_T \\
+  f_S = \sum_{S \subseteq T} g_T &\iff g_S = \sum_{S \subseteq T} (-1)^{|T| - |S|} f_T
+\end{aligned}
+$$
+
+就是上面说的那个容斥．
+
+可以扩展到可重集，让重复元素的贡献为 $0$ 即可．
 
 ### Mobius 反演
 
-### Euler 反演
+$$
+\begin{aligned}
+  f_n = \sum_{d \mid n} g_d &\iff g_n = \sum_{d \mid n} \mu(n / d) f_d \\
+  f_n = \sum_{n \mid d} g_d &\iff g_n = \sum_{n \mid d} \mu(d / n) f_d
+\end{aligned}
+$$
+
+带入 $f_i = 1, g_i = [i = 1]$ 容易通过 Dirichlet 卷积验证正确性．
+
+可以看作对质因子构成的可重集做子集反演．
 
 ### Min-Max 容斥
 
