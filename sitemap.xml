@@ -2,6 +2,330 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://krn1pnc.github.io/tags/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/2023-07-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-17-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-18-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-19-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-20-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-22-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-23-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-24-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-25-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1276d-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1458c-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1515f-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1732c1-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1768f-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1827b-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1842e-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1845e-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1845f-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1847d-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1849f-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1861e-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf1861f-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf555e-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/cf650d-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/codeforces-rec/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/crt-notes/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/exgcd-notes/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lagrange-interpolating-notes/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lg1446-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lg3312-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lg3317-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lg3362-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lg3732-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://krn1pnc.github.io/posts/lg3768-solution/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://krn1pnc.github.io/posts/lg4361-solution/</loc>
     
     <lastmod>2023-10-10</lastmod>
@@ -335,15 +659,6 @@
   </url>
   
   <url>
-    <loc>http://krn1pnc.github.io/tags/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://krn1pnc.github.io/posts/2022-09-rec/</loc>
     
     <lastmod>2023-10-10</lastmod>
@@ -435,321 +750,6 @@
   
   <url>
     <loc>http://krn1pnc.github.io/posts/2023-03-31-sim-reform-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/2023-07-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-17-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-18-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-19-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-20-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-22-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-23-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-24-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/24oi-2023-08-25-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1276d-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1458c-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1515f-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1732c1-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1768f-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1827b-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1842e-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1845e-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1845f-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1847d-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1849f-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1861e-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf1861f-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf555e-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/cf650d-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/codeforces-rec/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/crt-notes/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/exgcd-notes/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lagrange-interpolating-notes/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lg1446-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lg3312-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lg3317-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lg3362-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lg3732-solution/</loc>
-    
-    <lastmod>2023-10-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://krn1pnc.github.io/posts/lg3768-solution/</loc>
     
     <lastmod>2023-10-10</lastmod>
     
