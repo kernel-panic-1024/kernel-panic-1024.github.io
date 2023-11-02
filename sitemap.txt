@@ -1,10 +1,4 @@
 http://krn1pnc.github.io/tags/
-http://krn1pnc.github.io/posts/cf1849f-solution/
-http://krn1pnc.github.io/posts/cf1861e-solution/
-http://krn1pnc.github.io/posts/cf1861f-solution/
-http://krn1pnc.github.io/posts/cf555e-solution/
-http://krn1pnc.github.io/posts/cf650d-solution/
-http://krn1pnc.github.io/posts/codeforces-rec/
 http://krn1pnc.github.io/posts/crt-notes/
 http://krn1pnc.github.io/posts/exgcd-notes/
 http://krn1pnc.github.io/posts/i-e-principle-and-inversion-notes/
@@ -66,6 +60,12 @@ http://krn1pnc.github.io/posts/cf1842e-solution/
 http://krn1pnc.github.io/posts/cf1845e-solution/
 http://krn1pnc.github.io/posts/cf1845f-solution/
 http://krn1pnc.github.io/posts/cf1847d-solution/
+http://krn1pnc.github.io/posts/cf1849f-solution/
+http://krn1pnc.github.io/posts/cf1861e-solution/
+http://krn1pnc.github.io/posts/cf1861f-solution/
+http://krn1pnc.github.io/posts/cf555e-solution/
+http://krn1pnc.github.io/posts/cf650d-solution/
+http://krn1pnc.github.io/posts/codeforces-rec/
 http://krn1pnc.github.io/
 http://krn1pnc.github.io/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/
 http://krn1pnc.github.io/tags/%E7%9F%A9%E9%98%B5/
