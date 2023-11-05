@@ -29,9 +29,11 @@ math:
     enable: true
 
 codeblock:
-  prism:
-    light: prism-tomorrow
-    dark: prism-tomorrow
+  theme:
+    light: base16/tomorrow-night
+    dark: base16/tomorrow-night
+  copy_button:
+    enable: true
 
 post_meta:
   updated_at:
