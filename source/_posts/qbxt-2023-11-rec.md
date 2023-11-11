@@ -167,3 +167,149 @@ $$
 然后问题转化经典的 01 背包，注意到物品的重量和为 $n$，故只有 $O(\sqrt{n})$ 个本质不同的物品，单调队列或二进制分组优化多重背包即可．
 
 ### * C. 线段树
+
+注意到出题人非常友善，查询区间长度形如 $2^k$．
+
+先考虑不带修改怎么做，我们可以预处理 $\mathrm{mx}_{k, i}$ 表示 $[i, i + 2^k)$ 这一段区间的最大值，$\mathrm{sum}_{k, i}$ 表示 $[i, i + 2^k)$ 这一段区间的答案，有转移：
+
+$$
+\mathrm{sum}_{k, i} = \mathrm{sum}_{k - 1, i} + \mathrm{sum}_{k - 1, i + 2^{k - 1}} + \mathrm{mx}_{k, i}
+$$
+
+现在考虑带上修改，然后我们发现这个类似 ST 表的东西根本修不动．这时我们考虑一个根号分治，设置阈值 $B = 2^k$，预处理所有 $i \le k$ 的 $\mathrm{mx}_{i, j}$ 和 $\mathrm{sum}_{i, j}$，显然可以 $O(B)$ 修改．查询时若区间长度 $> B$，暴力重算缺失的部分．总复杂度 $O(n / B + B)$，$B$ 取 $\sqrt{n}$ 时最优，即大概取 $k = 8$．
+
+### * D. 游戏
+
+不妨设 $f_i$ 表示左手有 $i$ 枚硬币，右手有 $1$ 枚硬币时，游戏期望还要进行的次数．
+
+考虑进行几次 2 操作再进行 1 操作，令 $t = \lfloor \log_2 i \rfloor$ 有如下方程：
+
+$$
+f_i = \frac{1}{2^{t + 1}} (t + 1) + \sum_{j = 0}^t \frac{1}{2^{j + 1}} (f_{i - (2^j - 1) + 1} + (j + 1))
+$$
+
+稍微移项成能递推的形式：
+
+$$
+f_{i + 1} = \frac{3}{2} f_i - 2 - \sum_{j = 2}^t \frac{1}{2^j} (f_{i - (2^j - 1) + 1} + (j + 1))
+$$
+
+然后发现所有元都可以写成 $a f_1 + b$ 的形式，递推出 $f_{2n}$ 的表达式后即可解出 $f_1$．
+
+这 b 题卡常，得上个快速取模．
+
+## Day 4
+
+### A. 过量的子集和问题
+
+若不存在两个相同的元素，则不存在解，否则直接选择两个相同的元素即可．
+
+### B. 那里没有括号
+
+先考虑怎么求 $f$，设 $f_{l, r} = f(S[l, r])$．
+
+若 $S_l$ 为右括号，则 $f_{l, r} = f_{l + 1, r}$；若 $S_r$ 为左括号，枚举配对的右括号位置 $k$，有转移 $f_{l, r} \leftarrow f_{l + 1, k - 1} \times f_{k + 1, r}$．
+
+然后发现 $f$ 要用来算异或，不能取模，但是我们可以记录 $f \bmod 998244353$ 的值和 $f \bmod 2^{32}$ 的值，分别记为 $p$，$q$．则 $l \oplus r \oplus f_{l, r} \equiv (p_{l, r} - q_{l, r}) + q_{l, r} \oplus l \oplus r \pmod {998244353}$．
+
+### ! C. 缩点是邪恶的
+
+太神奇！！！
+
+### ! D. 牛奶路列车
+
+太困难！！！
+
+## Day 5 上午
+
+### A. 聚会
+
+$$
+\min\{b, n\} + \min\{g, n\} - n + 1
+$$
+
+### B. 城市
+
+首先可以一眼一个 DP，记 $\mathrm{anc}_u$ 表示 $u$ 的祖先链，$\mathrm{dep}_u$ 表示 $u$ 的深度，设 $f_u$ 表示在 $u$ 留宿的最小代价，有转移：
+
+$$
+f_u = \min_{v \in \mathrm{anc}_u} \{f_v + (\mathrm{dep}_u - \mathrm{dep}_v)a_u + b_u\} = \min_{v \in \mathrm{anc}_u} \{f_v - \mathrm{dep}_v a_u\} + \mathrm{dep}_u a_u + b_u
+$$
+
+显然这玩意可以斜率优化，由于祖先链上的点的 $\mathrm{dep}$ 递增，那么插入直线的斜率递增，可以对每个 $a_u$ 维护决策点位置，修改是后缀覆盖，反演一下就变成单点修改了，容易撤销．
+
+### ! C. 机器人
+
+还没补．暂时．
+
+### ! D. 网络赛
+
+还没补．暂时．
+
+## Day 5 下午
+
+### A. T1
+
+首先在最优策略下，手上不可能有多于 $10^6$ 个硬币，然后暴力模拟前 $10^6$ 轮即可．
+
+### ! B. T2
+
+还没补．暂时．
+
+### ! C. T3
+
+还没补．暂时．
+
+### D. T4
+
+[A124197](https://oeis.org/A124197)．
+
+然而不能直接算，查 FORMULA 发现计算式为：
+
+$$
+1 + n + \sum_{i = 1}^{n - 1} \sum_{j = 1}^i \sum_{d | j} [d \bmod 2 = 1]
+$$
+
+继续查表发现若令
+
+$$
+f_i = \sum_{j = 1}^i d(i) = \sum_{j = 1}^i \lfloor i / j \rfloor
+$$
+
+那么有
+
+$$
+\text{原式} = 1 + n + \sum_{i = 1}^{n - 1} f_i - f_{\lfloor i / 2 \rfloor}
+$$
+
+不妨令
+
+$$
+g_n = \sum_{i = 1}^{n} f_i - f_{\lfloor i / 2 \rfloor}
+$$
+
+容易发现若令
+
+$$
+h_n = \sum_{i = 1}^n \sum_{j = 1}^i \lfloor i / j \rfloor
+$$
+
+那么有
+
+$$
+g_n = h_n - h_{\lfloor n / 2 \rfloor} - h_{\lfloor (n - 1) / 2 \rfloor}
+$$
+
+只需解决 $h$ 的计算即可．我们有
+
+$$
+h_n = \sum_{i = 1}^n \sum_{j = 1}^i \lfloor i / j \rfloor = \sum_{j = 1}^n \sum_{i = j}^n \lfloor i / j \rfloor
+$$
+
+然后对于一个 $j$，当 $kj \le i < (k + 1)j$ 时，$\lfloor i / j \rfloor = k$，所以有
+
+$$
+h_n = \sum_{j = 1}^n j \frac{1}{2} \left(1 + \left\lfloor \frac{n - j + 1}{j} \right\rfloor\right) \left\lfloor \frac{n - j + 1}{j} \right\rfloor + ((n - j + 1) \bmod j)\left(\left\lfloor \frac{n - j + 1}{j} \right\rfloor + 1\right)
+$$
+
+然后就可以整除分块 $O(\sqrt{n})$ 计算了．
